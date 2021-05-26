@@ -10,8 +10,14 @@ Mule, el motor de tiempo de ejecución de Anypoint Platform, es un bus de servic
 # Ventajas
 
 Las ventajas de usar mule son:
+
  •	Creación y alojamiento de servicios: exponga y aloje servicios reutilizables, utilizando el ESB como un contenedor de servicios ligero.
+ 
  •	Mediación de servicios: proteja los servicios de los formatos y protocolos de mensajes, separe la lógica empresarial de la mensajería y habilite llamadas de servicio           independientes de la ubicación.
+ 
  •	Enrutamiento de mensajes: enrute, filtre, agregue y vuelva a secuenciar los mensajes según el contenido y las reglas.
+ 
  •	Transformación de datos: intercambie datos en distintos formatos y protocolos de transporte.
+ 
+ 
 
