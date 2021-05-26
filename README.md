@@ -50,5 +50,41 @@ A continuación, configuramos el puerto y el host.
 
 ![7](https://user-images.githubusercontent.com/34014602/119611200-fca4e400-bdbf-11eb-9f32-62860b9f70be.png)
 
+# Configuración del request
 
+Colocamos el host de nuestro servidor
 
+![8](https://user-images.githubusercontent.com/34014602/119611203-fca4e400-bdbf-11eb-9b82-d2a1363ad2c5.png)
+
+Configuración del path y del método
+
+![9](https://user-images.githubusercontent.com/34014602/119611619-8eacec80-bdc0-11eb-8480-a54bb5d6fefa.png)
+
+# Ejecución
+
+![10](https://user-images.githubusercontent.com/34014602/119611622-8f458300-bdc0-11eb-8d54-3fa860ddcfed.png)
+
+# Pruebas
+
+Listamos las cuentas 
+
+![11](https://user-images.githubusercontent.com/34014602/119611624-8f458300-bdc0-11eb-928e-8a65282d323e.png)
+
+Listamos la cuenta de un solo usuario
+
+![12](https://user-images.githubusercontent.com/34014602/119611626-8f458300-bdc0-11eb-9a51-bc2ffe1f06f6.png)
+
+# RESULTADO(S) OBTENIDO(S):
+
+Conocimiento básico de plataformas ESB y experimentación con procesos de negocio en arquitectura SOA
+
+# CONCLUSIONES:
+
+Se refuerza lo aprendido durante las clases, por medio de la experimentación de sistemas
+distribuidos con arquitectura orientada a servicios (SOA)
+
+# RECOMENDACIONES:
+
+Asistir a las sesiones de clase.
+
+Consultar con los docentes las dudas que puedan haber surgido durante las clases y durante las prácticas
