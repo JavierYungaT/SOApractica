@@ -34,5 +34,21 @@ Donde por medio del servicio Postman podemos realizar un CRUD de las cuentas
 
 ![4](https://user-images.githubusercontent.com/34014602/119611015-ba7ba280-bdbf-11eb-935b-1dd275dd1e5d.png)
 
+ A través de Mule realizamos el listado de todas las cuentas obtenidas.
  
+# Arquitectura Mule ESB
+ 
+ ![5](https://user-images.githubusercontent.com/34014602/119611198-fc0c4d80-bdbf-11eb-970a-f392023a8708.png)
+ 
+# Configuración del listener
+
+A continuación, ponemos el path del servicio a obtener y seguido de "/" ponemos el parámetro que queremos obtener.
+
+![6](https://user-images.githubusercontent.com/34014602/119611199-fca4e400-bdbf-11eb-9875-752233102b38.png)
+
+A continuación, configuramos el puerto y el host.
+
+![7](https://user-images.githubusercontent.com/34014602/119611200-fca4e400-bdbf-11eb-9f32-62860b9f70be.png)
+
+
 
