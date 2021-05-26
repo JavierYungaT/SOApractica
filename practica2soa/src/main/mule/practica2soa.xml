@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="0cbb8726-e5c6-4e51-b29b-b2e3d6a92c6f" >
+		<http:listener-connection host="localhost" port="3050" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="d2a3415e-cf48-45da-b655-f44461def716">
+		<http:request-connection host="http://localhost:3050/cuenta" />
+	</http:request-config>
+	<http:request-config name="HTTP_Request_configuration1" doc:name="HTTP Request configuration" doc:id="03dc1a20-dcc0-4bd4-8efa-77ef92e0b5f0" >
+		<http:request-connection host="localhost:3050" />
+	</http:request-config>
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="90451342-6511-4cf2-9060-4a55770e1cd0" >
+		<http:listener-connection host="localhost" port="3050" />
+	</http:listener-config>
+	<http:listener-config name="HTTP_Listener_config2" doc:name="HTTP Listener config" doc:id="9962c989-ac5b-4b0f-ae79-2c72b1e66fe2" >
+		<http:listener-connection host="localhost" port="3050" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration2" doc:name="HTTP Request configuration" doc:id="f25f5ddc-0d3d-41ee-be36-361618ff531b">
+		<http:request-connection host="localhost:3050" />
+	</http:request-config>
+	<http:listener-config name="HTTP_Listener_config3" doc:name="HTTP Listener config" doc:id="304fcd25-5ea6-4f96-945c-d89217c824d0" >
+		<http:listener-connection host="localhost" port="3050" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration3" doc:name="HTTP Request configuration" doc:id="5849ece2-db02-46b8-a3db-f57816864fc3" >
+		<http:request-connection host="dbs-developers-funds-transfer-v1.p.rapidapi.com" />
+	</http:request-config>
+	<flow name="Listar" doc:id="45a31870-5976-4964-9d65-63abf0147032" >
+		<http:listener doc:name="Listener" doc:id="f8f3510f-8d86-4869-b1a9-71d1fecdd14b" config-ref="HTTP_Listener_config" path="/cuenta" allowedMethods="GET"/>
+		<http:request method="GET" doc:name="Request" doc:id="74812fef-3b96-4a3b-8816-6ea8f2bbd1bb" config-ref="HTTP_Request_configuration1" path="/cuenta/1"/>
+	</flow>
+	<flow name="crearCuenta" doc:id="0bc62363-4893-4fb7-ab75-2710f10db8ab" >
+		<http:listener doc:name="Listener" doc:id="71211f49-0027-43a2-8bd7-5e1375f3b426" config-ref="HTTP_Listener_config2" path="/add" allowedMethods="POST"/>
+		<http:request method="POST" doc:name="Request" doc:id="36d422b1-c81f-425c-94c2-42c897a1cb00" config-ref="HTTP_Request_configuration2" path="/add" outputMimeType="application/json; idcuenta=2; saldocuenta=30; banco_idbanco=10; tipocuenta=ahorros">
+		</http:request>
+	</flow>
+	<flow name="practica2soaFlow" doc:id="d7a8eb90-3df4-4351-954b-f56be4818260" >
+		<http:listener doc:name="Listener" doc:id="60e18bdb-8493-4236-b971-3487cd4c5509" config-ref="HTTP_Listener_config3" path="/transfers" allowedMethods="GET"/>
+		<http:request method="OPTIONS" doc:name="Request" doc:id="898af671-72f6-4694-a7fa-7f2e72df574a" config-ref="HTTP_Request_configuration3" path="/transfers">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	"x-rapidapi-host" : "dbs-developers-funds-transfer-v1.p.rapidapi.com",
+	"X-RapidAPI-Key" : "062fdc6d44msh47fee7a8427af98p1dcaa7jsn01701cbe3aa4"
+}]]]></http:headers>
+		</http:request>
+	</flow>
+</mule>
