@@ -90,7 +90,7 @@ app.delete('/delete/:id', (req, res) => {
 // Check connect
 connection.connect(error => {
     if (error) throw error;
-    console.log('Database server running!');
+    console.log('El servidor esta funcionando!');
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
